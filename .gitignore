@@ -1,4 +1,4 @@
 node_modules
 key.md
-result/*
+/result/*
 .gulp/*
