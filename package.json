@@ -8,7 +8,8 @@
     "image": "gulp image",
     "js": "gulp jsfile",
     "imageflat": "gulp image --deststyle flat",
-    "jsflat": "gulp jsfile --deststyle flat"
+    "jsflat": "gulp jsfile --deststyle flat",
+    "link": "gulp link > log.txt"
   },
   "keywords": [],
   "author": "",
