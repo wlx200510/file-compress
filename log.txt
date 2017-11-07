@@ -1,4 +1,4 @@
-[14:07:30] Using gulpfile ~\Desktop\image_compress\gulpfile.js
-[14:07:30] Starting 'link'...
-http://hybrid.miui.com/app/com.xiangkan.android.lite?path=%2FVideoDetail%3FvideoId%3D48a8cd8fbf45b4de024b3b4dc7bb0691%26fromPath%3Dtianqi&__SRC__=%7B%22internal%22%3A%7B%22scene%22%3A%22tianqi%22%7D%7D&mifb=http%3A%2F%2Fshare.xk.miui.com%2F%3Fckey%3Dsecurity_v2%2F%23%2Fhome%3FvideoId%3D48a8cd8fbf45b4de024b3b4dc7bb0691%26ckey%3Dsecurity_v2
-[14:07:30] Finished 'link' after 508 μs
+[17:00:25] Using gulpfile ~\Desktop\image_compress\gulpfile.js
+[17:00:25] Starting 'link'...
+http://hybrid.miui.com/app/com.xiangkan.android.lite?path=%2FVideoDetail%3FvideoId%3D【VIDEOID】%26fromPath%3Dlajiqingli&__SRC__=%7B%22internal%22%3A%7B%22scene%22%3A%22lajiqingli%22%7D%7D&mifb=http%3A%2F%2Fshare.xk.miui.com%2F%3Fckey%3Dsecurity_v2%2F%23%2Fhome%3FvideoId%3D【VIDEOID】%26ckey%3Dsecurity_v2
+[17:00:25] Finished 'link' after 519 μs

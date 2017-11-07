@@ -15,12 +15,19 @@ var knownOptions = {
 
 var options = minimist(process.argv.slice(2), knownOptions);
 
-var generateLink = function(scene, vid, fallBack) {
+var generateLink = function(scene, fallBack, isIndex) {
     var packageName = 'com.xiangkan.android.lite';
     var SRC = `{"internal":{"scene":"${scene}"}}`;
-    var path = `/VideoDetail?videoId=${vid}&fromPath=${scene}`;
+    var path;
+    if (isIndex) {
+        path = encodeURIComponent(`/Index?source=${scene}`)
+    } else {
+        path = encodeURIComponent('/VideoDetail?videoId=') + '【VIDEOID】' + encodeURIComponent(`&fromPath=${scene}`)
+    }
     var linkHead = 'http://hybrid.miui.com/app/' + packageName +'?path=';
-    return linkHead + encodeURIComponent(path) + '&__SRC__=' + encodeURIComponent(SRC) + '&mifb=' + encodeURIComponent(fallBack)
+    var h5UrlArr = fallBack.split(' ');
+    var encodedUrl = encodeURIComponent(h5UrlArr[0]) + '【VIDEOID】' + encodeURIComponent(h5UrlArr[1]);
+    return linkHead + path + '&__SRC__=' + encodeURIComponent(SRC) + '&mifb=' + encodedUrl
 }
 
 gulp.task('clean:result', function () {
@@ -43,8 +50,8 @@ gulp.task('jsfile', ['clean:result'], function(){
 })
 
 gulp.task('link', function() {
-    var scene = 'tianqi'; //替换成相应的scene
-    var vid = '48a8cd8fbf45b4de024b3b4dc7bb0691'; // 传给新应用的视频详情页的id
-    var fallback = 'http://share.xk.miui.com/?ckey=security_v2/#/home?videoId=48a8cd8fbf45b4de024b3b4dc7bb0691&ckey=security_v2'; // fallback链接地址
-    console.log(generateLink(scene, vid, fallback))
+    var scene = 'lajiqingli'; //替换成相应的scene
+    var isIndex = false; //表征跳转到新应用的path是首页还是详情页
+    var fallback = 'http://share.xk.miui.com/?ckey=security_v2/#/home?videoId= &ckey=security_v2'; // fallback链接地址
+    console.log(generateLink(scene, fallback, isIndex))
 })
